@@ -11,14 +11,16 @@ export default {
         "brown": "#4F200D",
         "orange": "#FF8400",
         "yellow": "#FFD93D",
-        "white": "#F6F1E9",
+        "white": "#FFFFFF",
+        "nude-white": "#F6F1E9",
+        "cream": "#FFE6CC"
       },
       backgroundImage: (theme) => ({
-        "pure-white": "#F6F1E9",
-
+        "nude-white": "#F6F1E9",
+        "bg-home": "url('./src/assets/homepageBG.png')"
       }),
       fontFamily: {
-        uberMove: ["Uber Move Text", "sans-serif"],
+        'uberMove': ["Uber Move Text", "sans-serif"],
       },
     },
     screens: {
