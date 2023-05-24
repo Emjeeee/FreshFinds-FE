@@ -11,14 +11,26 @@ export default {
         "brown": "#4F200D",
         "orange": "#FF8400",
         "yellow": "#FFD93D",
-        "white": "#F6F1E9",
+        "white": "#FFFFFF",
+        "nude-white": "#F6F1E9",
+        "cream": "#FFE6CC"
       },
       backgroundImage: (theme) => ({
-        "pure-white": "#F6F1E9",
-
+        "nude-white": "#F6F1E9",
+        "bhome": "url('./src/assets/homeBG.svg')"
       }),
       fontFamily: {
-        uberMove: ["Uber Move Text", "sans-serif"],
+        'uberMove': ["Uber Move Text", "sans-serif"],
+      },
+      fontSize: {
+        "large": "2.5rem",
+        "x-large": "4rem"
+      },
+      fontWeight: {
+        "tnormal": 400,
+        "tmedium": 500,
+        "tsemi": 600,
+        "tbold": 700
       },
     },
     screens: {
