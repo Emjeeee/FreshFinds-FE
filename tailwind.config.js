@@ -18,7 +18,14 @@ export default {
       backgroundImage: (theme) => ({
         "nude-white": "#F6F1E9",
         "bhome": "url('./src/assets/homeBG.svg')",
-        "hhome": "url('./src/assets/homeBGmobile.svg')"
+        "hhome": "url('./src/assets/homeBGmobile.svg')",
+        "fruit": "url('./src/assets/fruits.svg')",
+        "meat": "url('./src/assets/meat.svg')",
+        "sushi": "url('./src/assets/sushi.svg')",
+        "pork": "url('./src/assets/pork.svg')",
+        "vege": "url('./src/assets/vegetables.svg')",
+        "pastry": "url('./src/assets/pastry.svg')",
+        "egg": "url('./src/assets/egg.svg')"
       }),
       fontFamily: {
         'uberMove': ["Uber Move Text", "sans-serif"],
