@@ -18,11 +18,11 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
     const flexBetween = "flex items-center justify-between"
     const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false)
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)")
-    const navbarBackground = isTopOfPage ? "" : "bg-transparent drop-shadow"
+    const navbarBackground = isTopOfPage ? "" : "bg-black drop-shadow"
 
     return <nav>
         <div
-            className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full py-6`}
+            className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full py-6 transition duration-500`}
         >
             <div className={`${flexBetween} mx-auto w-5/6`}>
                 <div className={`${flexBetween} w-full gap-16`}>
@@ -32,7 +32,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                     {/* RIGHT SIDE */}
                     {isAboveMediumScreens ? (
                         <div className={`${flexBetween} w-full`}>
-                            <div className={`${flexBetween} gap-20 text-lg`}>
+                            <div className={`${flexBetween} gap-20 text-lg font-bold mx-20`}>
                                 <Link
                                     page="Home"
                                     selectedPage={selectedPage}
@@ -44,17 +44,17 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                                     setSelectedPage={setSelectedPage}
                                 />
                                 <Link
-                                    page="Bucket"
+                                    page="Cart"
                                     selectedPage={selectedPage}
                                     setSelectedPage={setSelectedPage}
                                 />
                                 <Link
-                                    page="Contact Us"
+                                    page="Forum"
                                     selectedPage={selectedPage}
                                     setSelectedPage={setSelectedPage}
                                 />
                             </div>
-                            <div className={`${flexBetween} gap-8`}>
+                            <div className={`${flexBetween} gap-8 font-bold`}>
                                 <ActionButton setSelectedPage={setSelectedPage}>Register</ActionButton>
                                 <ActionButtons setSelectedPage={setSelectedPage}>Login</ActionButtons>
                             </div>
@@ -73,16 +73,16 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
         {/* MOBILE MENU MODAL */}
         {!isAboveMediumScreens && isMenuToggled && (
-            <div className="fixed right-0 bottom-0 z-40 h-full w-[200px] bg-amber-400 drop-shadow-xl flex flex-col justify-around">
+            <div className="fixed right-0 bottom-0 z-40 h-full w-[200px] bg-black drop-shadow-xl flex flex-col justify-around">
                 {/* CLOSE ICON */}
                 <div className="flex justify-end p-12">
                     <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                        <XMarkIcon className="h-6 w-6 text-black mx-10 -my-24" />
+                        <XMarkIcon className="h-6 w-6 text-white mx-10 -my-24" />
                     </button>
                 </div>
 
                 {/* MENU ITEMS */}
-                <div className="flex flex-col gap-10 text-2xl text-center text-black">
+                <div className="flex flex-col gap-10 text-2xl text-center text-white">
                     <Link
                         page="Home"
                         selectedPage={selectedPage}

@@ -17,7 +17,8 @@ export default {
       },
       backgroundImage: (theme) => ({
         "nude-white": "#F6F1E9",
-        "bhome": "url('./src/assets/homeBG.svg')"
+        "bhome": "url('./src/assets/homeBG.svg')",
+        "hhome": "url('./src/assets/homeBGmobile.svg')"
       }),
       fontFamily: {
         'uberMove': ["Uber Move Text", "sans-serif"],
@@ -34,7 +35,7 @@ export default {
       },
     },
     screens: {
-      xs: "480px",
+      xs: "428px",
       sm: "768px",
       md: "1060px"
     }
