@@ -10,6 +10,7 @@ import ToggleSwitchD from "@/shared/ToggleSwitchD"
 import ToggleSwitchE from "@/shared/ToggleSwitchE"
 import ToggleSwitchF from "@/shared/ToggleSwitchF"
 import ToggleSwitchG from "@/shared/ToggleSwitchG"
+import SideScroll from "@/shared/SideScroll"
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void
@@ -19,7 +20,7 @@ const Home = ({ setSelectedPage }: Props) => {
     return <section>
         <section
             id="home"
-            className="gap-16 md:h-full md:pb-0 md:bg-bhome md:bg-no-repeat xs:bg-hhome"
+            className="gap-16 md:h-full md:pb-0 md:bg-bhome md:bg-no-repeat xs:bg-hhome xs:bg-no-repeat"
         >
             {/* IMAGE AND MAIN HEADER */}
             <motion.div
@@ -126,33 +127,23 @@ const Home = ({ setSelectedPage }: Props) => {
                     </div>
                 </div>
             </div>
-            <div className="gap-8 flex flex-col mt-36">
+            <div className="gap-8 flex flex-col mt-36 mx-64">
                 <h1 className="text-4xl font-bold text-orange">
                     Weekly Trending🔥
                 </h1>
-                <div className="flex flex-row mt-10 gap-28 justify-center">
+                <div className="flex flex-col mt-10 gap-28 justify-center">
                     <div>
-                        <ToggleSwitchA />
-                    </div>
-                    <div>
-                        <ToggleSwitchB />
-                    </div>
-                    <div>
-                        <ToggleSwitchC />
-                    </div>
-                    <div>
-                        <ToggleSwitchD />
-                    </div>
-                    <div>
-                        <ToggleSwitchE />
-                    </div>
-                    <div>
-                        <ToggleSwitchF />
-                    </div>
-                    <div>
-                        <ToggleSwitchG />
+                        <SideScroll/>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section
+            id="trending"
+            className="gap-16 mx-20 md:h-full md:pb-0 md:bg-btrend md:bg-no-repeat"
+        >
+            <div className="gap-8 flex flex-col mx-64 mb-60">
+
             </div>
         </section>
     </section>

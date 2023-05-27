@@ -19,6 +19,7 @@ export default {
         "nude-white": "#F6F1E9",
         "bhome": "url('./src/assets/homeBG.svg')",
         "hhome": "url('./src/assets/homeBGmobile.svg')",
+        "btrend": "url('./src/assets/trendBG.svg')",
         "fruit": "url('./src/assets/fruits.svg')",
         "meat": "url('./src/assets/meat.svg')",
         "sushi": "url('./src/assets/sushi.svg')",
@@ -47,5 +48,5 @@ export default {
       md: "1060px"
     }
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar-hide')],
 }
