@@ -3,10 +3,14 @@ import { SelectedPage } from "@/shared/types"
 import HomePageLogo from "@/assets/logoHome.svg"
 import HomePageChef from "@/assets/imgD.svg"
 import { motion } from "framer-motion"
-import FruitSwitch from "@/shared/FruitSwitch"
-import { Switch } from "antd"
-import Sswitch from "@/shared/Sswitch"
-
+import ToggleSwitchA from "@/shared/ToggleSwitchA"
+import ToggleSwitchB from "@/shared/ToggleSwitchB"
+import ToggleSwitchC from "@/shared/ToggleSwitchC"
+import ToggleSwitchD from "@/shared/ToggleSwitchD"
+import ToggleSwitchE from "@/shared/ToggleSwitchE"
+import ToggleSwitchF from "@/shared/ToggleSwitchF"
+import ToggleSwitchG from "@/shared/ToggleSwitchG"
+import SideScroll from "@/shared/SideScroll"
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void
@@ -16,10 +20,13 @@ const Home = ({ setSelectedPage }: Props) => {
     return <section>
         <section
             id="home"
-            className="gap-16 md:h-full md:pb-0 md:bg-bhome md:bg-no-repeat xs:bg-hhome"
+            className="gap-16 md:h-full md:pb-0 md:bg-bhome md:bg-no-repeat xs:bg-hhome xs:bg-no-repeat"
         >
             {/* IMAGE AND MAIN HEADER */}
-            <div className="md:flex md:flex-col md:items-center md:justify-center md:h-full">
+            <motion.div
+                className="md:flex md:flex-col md:items-center md:justify-center md:h-full"
+                onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
+            >
                 {/* MAIN HEADER */}
                 <div className="z-10 md:w-4/5 md:flex md:flex-col md:mt-24 md:gap-60">
                     <motion.div
@@ -44,7 +51,16 @@ const Home = ({ setSelectedPage }: Props) => {
                         </div>
                     </motion.div>
                     {/* HEADINGS */}
-                    <div>
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.5 }}
+                        transition={{ duration: 0.5 }}
+                        variants={{
+                            hidden: { opacity: 0, x: -100 },
+                            visible: { opacity: 1, x: 0 },
+                        }}
+                    >
                         <div className="flex flex-row pt-40 justify-around">
                             <div>
                                 <div className="md: w-[491.69]">
@@ -73,29 +89,61 @@ const Home = ({ setSelectedPage }: Props) => {
                                 </div>
                             </div>
                         </div>
+                    </motion.div>
+                </div>
+            </motion.div>
+        </section>
+        <section 
+            id="category"
+            className="my-32 md:h-full md:pb-0"
+        >
+            <div className="gap-8 flex flex-col mx-64">
+                <h1 className="text-4xl font-bold text-orange">
+                    Choose Your Category
+                </h1>
+                <div className="flex flex-row mt-10 gap-28 justify-center">
+                    <div>
+                        <ToggleSwitchA />
+                    </div>
+                    <div>
+                        <ToggleSwitchB />
+                    </div>
+                    <div>
+                        <ToggleSwitchC />
+                    </div>
+                    <div>
+                        <ToggleSwitchD />
+                    </div>
+                </div>
+                <div className="flex flex-row gap-28 justify-center">
+                    <div>
+                        <ToggleSwitchE />
+                    </div>
+                    <div>
+                        <ToggleSwitchF />
+                    </div>
+                    <div>
+                        <ToggleSwitchG />
+                    </div>
+                </div>
+            </div>
+            <div className="gap-8 flex flex-col mt-36 mx-64">
+                <h1 className="text-4xl font-bold text-orange">
+                    Weekly Trending🔥
+                </h1>
+                <div className="flex flex-col mt-10 gap-28 justify-center">
+                    <div>
+                        <SideScroll/>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="category">
-            <div>
-                <h1 className="text-4xl font-bold text-orange">
-                    Choose Your Category
-                </h1>
-                <div className="flex flex-row">
-                    <div>
-                        <FruitSwitch/>
-                    </div>
-                    <div>
-                        <FruitSwitch/>
-                    </div>
-                    <div>
-                        <FruitSwitch/>
-                    </div>
-                    <div>
-                        
-                    </div>
-                </div>
+        <section
+            id="trending"
+            className="gap-16 mx-20 md:h-full md:pb-0 md:bg-btrend md:bg-no-repeat"
+        >
+            <div className="gap-8 flex flex-col mx-64 mb-60">
+
             </div>
         </section>
     </section>
