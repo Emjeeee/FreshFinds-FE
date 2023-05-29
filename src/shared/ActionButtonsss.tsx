@@ -7,7 +7,7 @@ type Props = {
     setSelectedPage: (value: SelectedPage) => void
 }
 
-const ActionButtons = ({ children, setSelectedPage }: Props) => {
+const ActionButtonsss = ({ children, setSelectedPage }: Props) => {
     return (
       <AnchorLink
         className="bg-orange rounded-lg px-10 py-2 duration-300"
@@ -19,4 +19,4 @@ const ActionButtons = ({ children, setSelectedPage }: Props) => {
     )
   }
 
-export default ActionButtons
+export default ActionButtonsss
