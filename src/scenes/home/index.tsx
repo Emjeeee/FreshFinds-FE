@@ -2,6 +2,10 @@ import ActionButtonss from "@/shared/ActionButtonss"
 import { SelectedPage } from "@/shared/types"
 import HomePageLogo from "@/assets/logoHome.svg"
 import HomePageChef from "@/assets/imgD.svg"
+import Logo from "@/assets/freshLogo.svg"
+import Phone from "@/assets/iphone.svg"
+import App from "@/assets/appstore.svg"
+import Play from "@/assets/playstore.svg"
 import { motion } from "framer-motion"
 import ToggleSwitchA from "@/shared/ToggleSwitchA"
 import ToggleSwitchB from "@/shared/ToggleSwitchB"
@@ -97,7 +101,7 @@ const Home = ({ setSelectedPage }: Props) => {
                 </motion.div>
             </section>
             <section 
-                id="category"
+                id="home-category-and-weekly-trending"
                 className="my-32 md:h-full md:pb-0"
             >
                 <div className="gap-8 flex flex-col mx-64">
@@ -131,9 +135,14 @@ const Home = ({ setSelectedPage }: Props) => {
                     </div>
                 </div>
                 <div className="gap-8 flex flex-col mt-36 mx-64">
-                    <h1 className="text-4xl font-bold text-orange">
-                        Weekly Trending🔥
-                    </h1>
+                    <div className="flex flex-row justify-between">
+                        <h1 className="text-4xl font-bold text-orange">
+                            Weekly Trending🔥
+                        </h1>
+                        <p className="flex flex-col justify-center text-xl text-gray-400 cursor-pointer">
+                            See More
+                        </p>
+                    </div>
                     <div className="flex flex-col mt-10 gap-28 justify-center">
                         <div>
                             <SideScroll/>
@@ -142,12 +151,12 @@ const Home = ({ setSelectedPage }: Props) => {
                 </div>
             </section>
             <section
-                id="trending"
-                className="gap-16 h-full pb-0 bg-btrend bg-no-repeat bg-cover"
+                id="home-trending-today"
+                className="gap-16 h-full pb-0 bg-btrend bg-orange bg-no-repeat bg-cover pt-96"
             >
-                <div className="flex flex-col mx-64 pt-96">
+                <div className="flex flex-col mx-64">
                     <div>
-                        <h1 className="text-6xl font-semibold text-white flex justify-center mb-20">
+                        <h1 className="text-6xl font-semibold text-white flex justify-center mb-20 tracking-wide">
                             Trending Today!
                         </h1>
                     </div>
@@ -162,8 +171,75 @@ const Home = ({ setSelectedPage }: Props) => {
                             <Card setSelectedPage={setSelectedPage} />
                         </div>
                     </div>
-                    <div>
-                        
+                </div>
+            </section>
+            <section
+                id="home-introducing"
+                className="gap-16 h-full pb-40 bg-orange bg-no-repeat bg-cover pt-40"
+            >
+                <div className="flex flex-col">
+                    <div className="flex flex-row justify-center gap-4">
+                        <div className="flex flex-row">
+                            <img className="w-72" alt="logo" src={Logo} />
+                        </div>
+                        <h1 className="text-5xl text-white font-semibold flex mt-10">Introducing</h1>
+                    </div>
+                    <div className="flex flex-row justify-between mt-12">
+                        <div className="flex flex-col gap-10 ml-60 justify-center">
+                            <div className="flex flex-row gap-4">
+                                <img className="w-60" alt="logo" src={Logo} />
+                                <h1 className="text-4xl text-white font-semibold flex mt-9">Mobile App</h1>
+                            </div>
+                            <div className="flex flex-col gap-5 text-xl font-medium">
+                                <div className="">
+                                    <span className="text-2xl font-extrabold">FreshFinds</span> offers the ultimate convenience with its mobile app,
+                                    <br />
+                                    providing users with access to its features anytime, anywhere.
+                                </div>
+                                <div>
+                                    The intuitive interface ensures a seamless experience, and
+                                    <br />
+                                    personalized ingredient suggestions and store navigation
+                                    <br />
+                                    assistance are all at your fingertips.
+                                </div>
+                                <div className="font-bold mt-4">
+                                    Available at:
+                                </div>
+                                <div className="flex flex-row gap-10">
+                                    <div className="cursor-pointer hover:scale-105 ease-in-out duration-300">
+                                        <img src={App} alt="app" />
+                                    </div>
+                                    <div className="cursor-pointer hover:scale-105 ease-in-out duration-300">
+                                        <img src={Play} alt="play" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex justify-end">
+                                <img src={Phone} alt="phone" className="-z-1 w-2/3" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section
+                id="home-feedbacks"
+                className="gap-16 h-full pb-40 bg-orange bg-no-repeat bg-cover pt-40"
+            >
+                <div className="flex flex-col">
+                    <div className="flex flex-row justify-center gap-4">
+                        <div className="flex flex-row">
+                            <img className="w-72" alt="logo" src={Logo} />
+                        </div>
+                        <h1 className="text-5xl text-white font-semibold flex mt-10">Feedbacks</h1>
+                    </div>
+                    <div className="flex flex-row">
+                        <div>
+                            {/* VOICES */}
+                        </div>
+                        <div>
+                            {/* CARD */}
+                        </div>
                     </div>
                 </div>
             </section>
