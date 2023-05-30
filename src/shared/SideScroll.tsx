@@ -17,7 +17,7 @@ function SideScroll() {
   return (
     <>
       <div className='relative flex items-center'>
-        <MdChevronLeft className='opacity-1 cursor-pointer hover:opacity-1 fill-orange' onClick={slideLeft} size={40} />
+        <MdChevronLeft className='opacity-1 cursor-pointer hover:opacity-1 fill-orange mb-10' onClick={slideLeft} size={40} />
         <div id="slider" className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth'>
           {data.map((item) => (
             <img
@@ -27,7 +27,7 @@ function SideScroll() {
             />
           ))}
         </div>
-        <MdChevronRight className='opacity-1 cursor-pointer hover:opacity-1 fill-orange' onClick={slideRight} size={40} />
+        <MdChevronRight className='opacity-1 cursor-pointer hover:opacity-1 fill-orange mb-10' onClick={slideRight} size={40} />
       </div>
     </>
   )

@@ -1,0 +1,11 @@
+npm i
+npm i framer-motion
+npm i react-icons --save
+npm i antd
+npm i @headlessui/react
+npm i @heroicons/react
+npm i @mui/material @emotion/react @emotion/styled
+npm i react-feather
+npm i react-anchor-link-smooth-scroll
+npm i tailwind-scrollbar-hide
+

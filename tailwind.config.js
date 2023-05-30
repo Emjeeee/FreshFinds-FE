@@ -29,7 +29,7 @@ export default {
         "egg": "url('./src/assets/egg.svg')"
       }),
       fontFamily: {
-        'uberMove': ["Uber Move Text", "sans-serif"],
+        'uberMove': "uber",
       },
       fontSize: {
         "large": "2.5rem",
