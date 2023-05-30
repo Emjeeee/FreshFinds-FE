@@ -17,17 +17,17 @@ function SideScroll() {
   return (
     <>
       <div className='relative flex items-center'>
-        <MdChevronLeft className='opacity-100 cursor-pointer hover:opacity-100' onClick={slideLeft} size={40} />
+        <MdChevronLeft className='opacity-1 cursor-pointer hover:opacity-1 fill-orange mb-10' onClick={slideLeft} size={40} />
         <div id="slider" className='w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth'>
           {data.map((item) => (
             <img
-              className='w-[350px] inline-block p-2 cursor-pointer hover:scale-105 ease-in-out duration-300'
+              className='w-[280px] h-[180.14px] inline-block p-2 cursor-pointer hover:scale-105 hover:shadow-[15px_15px_4px_-1px_rgba(255,217,61,1)] ease-in-out duration-300 border-0 rounded-[20px] mx-6 mb-10'
               src={item.img}
               alt=""
             />
           ))}
         </div>
-        <MdChevronRight className='opacity-100 cursor-pointer hover:opacity-100' onClick={slideRight} size={40} />
+        <MdChevronRight className='opacity-1 cursor-pointer hover:opacity-1 fill-orange mb-10' onClick={slideRight} size={40} />
       </div>
     </>
   )
