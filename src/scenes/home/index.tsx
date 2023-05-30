@@ -1,3 +1,4 @@
+import * as React from 'react';
 import ActionButtonss from "@/shared/ActionButtonss"
 import { SelectedPage } from "@/shared/types"
 import HomePageLogo from "@/assets/logoHome.svg"
@@ -6,6 +7,8 @@ import Logo from "@/assets/freshLogo.svg"
 import Phone from "@/assets/iphone.svg"
 import App from "@/assets/appstore.svg"
 import Play from "@/assets/playstore.svg"
+import Voice from "@/assets/voices.svg"
+import Profile from "@/assets/profile.svg"
 import { motion } from "framer-motion"
 import ToggleSwitchA from "@/shared/ToggleSwitchA"
 import ToggleSwitchB from "@/shared/ToggleSwitchB"
@@ -16,12 +19,17 @@ import ToggleSwitchF from "@/shared/ToggleSwitchF"
 import ToggleSwitchG from "@/shared/ToggleSwitchG"
 import SideScroll from "@/shared/SideScroll"
 import Card from "@/shared/Card"
+import TextField from "@mui/material/TextField"
+import Rating from '@mui/material/Rating'
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void
 }
 
 const Home = ({ setSelectedPage }: Props) => {
+
+const [value, setValue] = React.useState<number | null>(1);
+
     return (
     <>
         <section>
@@ -175,7 +183,7 @@ const Home = ({ setSelectedPage }: Props) => {
             </section>
             <section
                 id="home-introducing"
-                className="gap-16 h-full pb-40 bg-orange bg-no-repeat bg-cover pt-40"
+                className="gap-16 h-full bg-orange bg-no-repeat bg-cover pt-40"
             >
                 <div className="flex flex-col">
                     <div className="flex flex-row justify-center gap-4">
@@ -224,23 +232,113 @@ const Home = ({ setSelectedPage }: Props) => {
             </section>
             <section
                 id="home-feedbacks"
-                className="gap-16 h-full pb-40 bg-orange bg-no-repeat bg-cover pt-40"
+                className="gap-16 h-full bg-orange bg-no-repeat bg-cover pt-40"
             >
-                <div className="flex flex-col">
+                <div className="flex flex-col gap-40">
                     <div className="flex flex-row justify-center gap-4">
                         <div className="flex flex-row">
                             <img className="w-72" alt="logo" src={Logo} />
                         </div>
                         <h1 className="text-5xl text-white font-semibold flex mt-10">Feedbacks</h1>
                     </div>
-                    <div className="flex flex-row">
-                        <div>
-                            {/* VOICES */}
+                    <div className="flex flex-row mx-36 justify-around">
+                        <div className="flex flex-col justify-center gap-10">
+                            <div className="flex text-6xl font-extrabold tracking-tight text-white">
+                                Let's Hear Our
+                                <br />
+                                Client Voices
+                            </div>
+                            <div>
+                                <img src={Voice} alt="voice" />
+                            </div>
                         </div>
-                        <div>
-                            {/* CARD */}
+                        <div className="flex flex-col bg-white rounded-3xl p-10">
+                            {/* CONTAINER */}
+                            <div className="flex flex-row items-center gap-10">
+                                {/* IMAGE & PARAGRAPH */}
+                                <div>
+                                    {/* IMAGE */}
+                                    <img src={Profile} alt="profile" />
+                                </div>
+                                <div className="flex flex-col gap-3 justify-start">
+                                    <div className="text-[#939393]">
+                                        {/* PARAGRAPH */}
+                                        "I just received this shirt in the mail and I'm blown
+                                        <br />
+                                        away by the quality of the fabric. It feels so soft and
+                                        <br />
+                                        comfortable, and the fit is perfect. I love the
+                                        <br />
+                                        attention to detail in the design and the colors are
+                                        <br />
+                                        so vibrant. This is truly a work of art and I feel so
+                                        <br />
+                                        lucky to own it. Thank you for creating such a
+                                        <br />
+                                        wonderful product!"
+                                    </div>
+                                    <div className="bg-black flex flex-row px-3 py-1 rounded-full gap-3 w-1/3 justify-center">
+                                            {/* EVERYONE */}
+                                        <div className="text-orange text-sm">
+                                            Everyone
+                                        </div>
+                                        <div className="text-orange text-sm">
+                                            ▼
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="flex flex-row justify-between">
+                                {/* NAME & THREAD */}
+                                <div className="flex flex-col gap-3">
+                                    <div className="text-black text-4xl font-bold">
+                                        {/* NAME */}
+                                        Hansen Martino
+                                    </div>
+                                    <div className="text-gray-400">
+                                        {/* JOB */}
+                                        Professional Taylor
+                                    </div>
+                                    <div>
+                                        {/* RATINGS */}
+                                        <Rating
+                                            name="simple-controlled"
+                                            size="large"
+                                            defaultValue={0.5} precision={0.5}
+                                            value={value}
+                                            onChange={(event, newValue) => {
+                                                setValue(newValue);
+                                            }}
+                                        />
+                                    </div>
+                                </div>
+                                <div className="flex flex-col w-3/5 pl-9 gap-7">
+                                    <div>
+                                        {/* REPLY */}
+                                            <TextField
+                                            fullWidth
+                                            size="small"
+                                            id="standard-basic" label="🌐 Everyone can reply"
+                                            variant="standard" />
+                                    </div>
+                                    <div className="flex flex-row justify-end">
+                                        {/* POST */}
+                                        <ActionButtonss setSelectedPage={setSelectedPage}>
+                                            Post ⌲
+                                        </ActionButtonss>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </section>
+            <section
+                id="connected"
+                className="gap-16 h-full pb-0 bg-bconnect bg-orange bg-no-repeat bg-cover pt-96"
+            >
+                <div>
+                    
                 </div>
             </section>
         </section>

@@ -25,6 +25,7 @@
     "react-dom": "^18.2.0",
     "react-feather": "^2.0.10",
     "react-icons": "^4.8.0",
+    "react-search-field": "^2.0.1",
     "react-slider": "^2.0.4",
     "styled-components": "^5.3.10",
     "tailwind-scrollbar-hide": "^1.1.7"

@@ -8,4 +8,4 @@ npm i @mui/material @emotion/react @emotion/styled
 npm i react-feather
 npm i react-anchor-link-smooth-scroll
 npm i tailwind-scrollbar-hide
-
+npm i react-search-field --save --force
