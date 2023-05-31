@@ -26,7 +26,8 @@ export default {
         "pork": "url('./src/assets/pork.svg')",
         "vege": "url('./src/assets/vegetables.svg')",
         "pastry": "url('./src/assets/pastry.svg')",
-        "egg": "url('./src/assets/egg.svg')"
+        "egg": "url('./src/assets/egg.svg')",
+        "bforum": "url('./src/assets/BGforum.svg')"
       }),
       fontFamily: {
         'uberMove': "uber",

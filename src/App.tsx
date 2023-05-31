@@ -29,7 +29,7 @@ function App() {
       selectedPage={selectedPage} 
       setSelectedPage={setSelectedPage}
     />
-    <Home setSelectedPage={setSelectedPage} />
+    <Forum setSelectedPage={setSelectedPage} />
 
   </div>
 }
