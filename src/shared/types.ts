@@ -3,5 +3,6 @@ export enum SelectedPage {
     Category = "category",
     Ingredients = "ingredients",
     Bucket = "bucket",
-    ContactUs = "contactus"
+    ContactUs = "contactus",
+    Footer = "footer"
   }

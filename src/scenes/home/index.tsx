@@ -1,5 +1,6 @@
 import * as React from 'react';
 import ActionButtonss from "@/shared/ActionButtonss"
+import SearchBar from '@/shared/SearchBar';
 import { SelectedPage } from "@/shared/types"
 import HomePageLogo from "@/assets/logoHome.svg"
 import HomePageChef from "@/assets/imgD.svg"
@@ -147,9 +148,7 @@ const [value, setValue] = React.useState<number | null>(1);
                         <h1 className="text-4xl font-bold text-orange">
                             Weekly Trending🔥
                         </h1>
-                        <p className="flex flex-col justify-center text-xl text-gray-400 cursor-pointer">
-                            See More
-                        </p>
+                        <a href="" className="flex flex-col justify-center text-xl text-gray-400">See More</a>
                     </div>
                     <div className="flex flex-col mt-10 gap-28 justify-center">
                         <div>
@@ -216,10 +215,10 @@ const [value, setValue] = React.useState<number | null>(1);
                                 </div>
                                 <div className="flex flex-row gap-10">
                                     <div className="cursor-pointer hover:scale-105 ease-in-out duration-300">
-                                        <img src={App} alt="app" />
+                                        <a href=""><img src={App} alt="app" /></a>
                                     </div>
                                     <div className="cursor-pointer hover:scale-105 ease-in-out duration-300">
-                                        <img src={Play} alt="play" />
+                                        <a href=""><img src={Play} alt="play" /></a>
                                     </div>
                                 </div>
                             </div>
@@ -337,8 +336,13 @@ const [value, setValue] = React.useState<number | null>(1);
                 id="connected"
                 className="gap-16 h-full pb-0 bg-bconnect bg-orange bg-no-repeat bg-cover pt-96"
             >
-                <div>
-                    
+                <div className='flex flex-col justify-center gap-12 pt-24 pb-24'>
+                    <div className='flex justify-center text-6xl font-extrabold text-white'>
+                        Let's Get Connected!
+                    </div>
+                    <div className='flex justify-center'>
+                        <SearchBar/>
+                    </div>
                 </div>
             </section>
         </section>

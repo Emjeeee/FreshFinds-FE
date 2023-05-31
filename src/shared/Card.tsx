@@ -16,7 +16,7 @@ const Card: React.FC<Props> = ({ setSelectedPage }: Props) => {
   }
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col hover:scale-105 ease-in-out duration-300">
       <img
         className="object-cover object-center mx-14 h-w-52 w-52 inset-0 z-30"
         src={TrendFood}
