@@ -1,6 +1,6 @@
-import * as React from 'react';
+import * as React from 'react'
+import { useEffect, useState } from "react"
 import ActionButtonss from "@/shared/ActionButtonss"
-import SearchBar from '@/shared/SearchBar';
 import { SelectedPage } from "@/shared/types"
 import HomePageLogo from "@/assets/logoHome.svg"
 import HomePageChef from "@/assets/imgD.svg"
@@ -22,18 +22,42 @@ import SideScroll from "@/shared/SideScroll"
 import Card from "@/shared/Card"
 import TextField from "@mui/material/TextField"
 import Rating from '@mui/material/Rating'
+import Navbar from "@/scenes/navbar"
+import Footer from "@/scenes/footer"
 
 type Props = {
-    setSelectedPage: (value: SelectedPage) => void
+    // setSelectedPage: (value: SelectedPage) => void
 }
 
-const Home = ({ setSelectedPage }: Props) => {
+const Home = (props: Props) => {
 
 const [value, setValue] = React.useState<number | null>(1);
+
+    const [selectedPage, setSelectedPage] = useState<SelectedPage>(
+        SelectedPage.Home
+    )
+    const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY === 0) {
+                setIsTopOfPage(true)
+                setSelectedPage(SelectedPage.Home)
+            }
+            if (window.scrollY !== 0) setIsTopOfPage(false)
+        }
+        window.addEventListener("scroll", handleScroll)
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, [])
 
     return (
     <>
         <section>
+            <Navbar
+                isTopOfPage={isTopOfPage}
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+            />
             <section
                 id="home"
                 className="gap-16 h-full pb-0 bg-bhome bg-no-repeat bg-cover"
@@ -109,7 +133,7 @@ const [value, setValue] = React.useState<number | null>(1);
                     </div>
                 </motion.div>
             </section>
-            <section 
+            <section
                 id="home-category-and-weekly-trending"
                 className="my-32 md:h-full md:pb-0"
             >
@@ -231,7 +255,7 @@ const [value, setValue] = React.useState<number | null>(1);
             </section>
             <section
                 id="home-feedbacks"
-                className="gap-16 h-full bg-orange bg-no-repeat bg-cover pt-40"
+                className="gap-16 h-full bg-orange bg-no-repeat bg-cover pt-40 pb-96"
             >
                 <div className="flex flex-col gap-40">
                     <div className="flex flex-row justify-center gap-4">
@@ -332,19 +356,7 @@ const [value, setValue] = React.useState<number | null>(1);
                     </div>
                 </div>
             </section>
-            <section
-                id="connected"
-                className="gap-16 h-full pb-0 bg-bconnect bg-orange bg-no-repeat bg-cover pt-96"
-            >
-                <div className='flex flex-col justify-center gap-12 pt-24 pb-24'>
-                    <div className='flex justify-center text-6xl font-extrabold text-white'>
-                        Let's Get Connected!
-                    </div>
-                    <div className='flex justify-center'>
-                        <SearchBar/>
-                    </div>
-                </div>
-            </section>
+            <Footer />
         </section>
     </>
 )}

@@ -7,12 +7,26 @@ import FacebookIcon from '@/assets/facebook.svg'
 import TwitterIcon from '@/assets/twitter.svg'
 import LinkedIcon from '@/assets/linkedin.svg'
 import InstaIcon from '@/assets/instagram.svg'
+import SearchBar from '@/shared/SearchBar'
 
 type Props = {}
 
 const Footer = (props: Props) => {
   return (
     <>
+        <section
+            id="connected"
+            className="gap-16 h-full pb-0 bg-bconnect bg-no-repeat bg-cover pt-48 -mt-52"
+        >
+            <div className='flex flex-col justify-center gap-12 pt-24 pb-24'>
+                <div className='flex justify-center text-6xl font-extrabold text-white'>
+                    Let's Get Connected!
+                </div>
+                <div className='flex justify-center'>
+                    <SearchBar />
+                </div>
+            </div>
+        </section>
         <div className='flex flex-col justify-center bg-black'>
             <div className='flex flex-row justify-between mx-32 mb-10 mt-5 h-full text-white'>
                 <div className='flex justify-center text-center'>
@@ -25,9 +39,9 @@ const Footer = (props: Props) => {
                         </h1>
                         <div className='flex flex-col gap-3 text-xl'>
                             <a href="#home">Home</a>
-                            <a href="/">Ingredients</a>
-                            <a href="/">Cart</a>
-                            <a href="/">Forum</a>
+                            <a href="#ingredients">Ingredients</a>
+                            <a href="#cart">Cart</a>
+                            <a href="#forum">Forum</a>
                         </div>
                     </div>
                     <div className='flex flex-col gap-7'>

@@ -27,7 +27,8 @@ export default {
         "vege": "url('./src/assets/vegetables.svg')",
         "pastry": "url('./src/assets/pastry.svg')",
         "egg": "url('./src/assets/egg.svg')",
-        "bconnect": "url('./src/assets/connectBG.svg')"
+        "bconnect": "url('./src/assets/connectBG.svg')",
+        "bingred": "url('./src/assets/bingre.svg')"
       }),
       fontFamily: {
         'uberMove': "uber",
