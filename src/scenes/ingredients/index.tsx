@@ -159,12 +159,70 @@ const Ingredients = (props: Props) => {
           </div>
         </section>
         <section
-          id="recipe"
+          id="horizontal-line"
           className="my-32 md:h-full md:pb-0"
         >
           <hr className='w-11/12 h-1 mx-auto my-4 bg-black border-0 rounded md:my-10 dark:bg-gray-700'/>
         </section>
-        {/* <Footer /> */}
+        <section
+          id="recipe"
+          className="my-32 md:h-full md:pb-0 mb-80"
+        >
+          <div className='flex flex-col justify-center gap-20 text-black items-center mx-14'>
+            <div className='flex'>
+              {/* SLIDESHOW */}
+              GAMBAR
+            </div>
+            <div className='flex flex-row gap-10'>
+              <div className='flex flex-col gap-20'>
+                {/* FIRST COLUMN */}
+                <div>
+                  GAMBAR
+                </div>
+                <div>
+                  GAMBAR
+                </div>
+                <div>
+                  GAMBAR
+                </div>
+                <div>
+                  GAMBAR
+                </div>
+              </div>
+              <div className='flex flex-col gap-20'>
+                {/* SECOND COLUMN */}
+                <div>
+                  GAMBAR
+                </div>
+                <div>
+                  GAMBAR
+                </div>
+                <div>
+                  GAMBAR
+                </div>
+                <div>
+                  GAMBAR
+                </div>
+              </div>
+              <div className='flex flex-col gap-20'>
+                {/* THIRD COLUMN */}
+                <div>
+                  GAMBAR
+                </div>
+                <div>
+                  GAMBAR
+                </div>
+                <div>
+                  GAMBAR
+                </div>
+                <div>
+                  GAMBAR
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <Footer />
       </section>
     </>
   )
