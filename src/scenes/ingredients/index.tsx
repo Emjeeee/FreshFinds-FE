@@ -13,9 +13,13 @@ import ToggleSwitchF from "@/shared/ToggleSwitchF"
 import ToggleSwitchG from "@/shared/ToggleSwitchG"
 import Card from "@/shared/Card"
 import TextField from "@mui/material/TextField"
+import Carousel from '@/shared/Carousel'
 import Cart from "@/assets/cart.svg"
 import Navbar from "@/scenes/navbar"
 import Footer from "@/scenes/footer"
+import Sushi from '@/assets/sushiCar.svg'
+import Burger from '@/assets/burgerCar.svg'
+import Salad from '@/assets/saladCar.svg'
 
 type Props = {
   // setSelectedPage: (value: SelectedPage) => void
@@ -45,11 +49,13 @@ const Ingredients = (props: Props) => {
   return (
     <>
       <section>
-        <Navbar
-          isTopOfPage={isTopOfPage}
-          selectedPage={selectedPage}
-          setSelectedPage={setSelectedPage}
-        />
+        <section>
+          <Navbar
+            isTopOfPage={isTopOfPage}
+            selectedPage={selectedPage}
+            setSelectedPage={setSelectedPage}
+          />
+        </section>
         <section
           id="ingredients"
           className="gap-16 h-full pb-0 bg-bingred bg-no-repeat bg-cover"
@@ -169,9 +175,9 @@ const Ingredients = (props: Props) => {
           className="my-32 md:h-full md:pb-0 mb-80"
         >
           <div className='flex flex-col justify-center gap-20 text-black items-center mx-14'>
-            <div className='flex'>
+            <div className='flex w-full'>
               {/* SLIDESHOW */}
-              GAMBAR
+              <Carousel/>
             </div>
             <div className='flex flex-row gap-10'>
               <div className='flex flex-col gap-20'>

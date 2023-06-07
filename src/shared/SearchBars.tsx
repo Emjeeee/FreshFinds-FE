@@ -1,4 +1,5 @@
-import React from "react";
+import React from "react"
+import SendIcon from '@mui/icons-material/Send';
 
 const SearchBars = () => {
     return (
@@ -23,6 +24,15 @@ const SearchBars = () => {
                     placeholder="Search"
                     className="w-full py-4 pl-14 pr-4 text-white text-xl border rounded-2xl outline-none bg-black focus:placeholder:opacity-50 placeholder:text-orange placeholder:text-xl"
                 />
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="absolute top-0 bottom-0 w-6 h-6 my-auto text-orange right-3"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <SendIcon/>
+                </svg>
             </div>
         </form>
     );

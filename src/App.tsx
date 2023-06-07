@@ -1,6 +1,6 @@
 // import Navbar from "@/scenes/navbar"
 import Home from "@/scenes/home"
-import Ingredients from "./scenes/ingredients"
+// import Ingredients from "./scenes/ingredients"
 // import { useEffect, useState } from "react"
 // import { SelectedPage } from "@/shared/types"
 // import Footer from "@/scenes/footer"
