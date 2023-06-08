@@ -17,8 +17,10 @@ export default {
       },
       backgroundImage: (theme) => ({
         "nude-white": "#F6F1E9",
-        "bhome": "url('./src/assets/homeBG.svg')",
-        "hhome": "url('./src/assets/homeBGmobile.svg')",
+        "bhome-first": "url('./src/assets/homeBG.svg')",
+        "bhome-third": "url('./src/assets/homeBG3.svg')",
+        "bhome-white": "url('./src/assets/homeBGWhite.svg')",
+        "bhome-orange": "url('./src/assets/homeBGOrange.svg')",
         "btrend": "url('./src/assets/trendBG.svg')",
         "fruit": "url('./src/assets/fruits.svg')",
         "meat": "url('./src/assets/meat.svg')",
@@ -45,9 +47,20 @@ export default {
       },
     },
     screens: {
-      xs: "428px",
-      sm: "768px",
-      md: "1060px"
+      sm: '640px',
+      // => @media (min-width: 640px) { ... }
+
+      md: '768px',
+      // => @media (min-width: 768px) { ... }
+
+      lg: '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      xl: '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px'
+      // => @media (min-width: 1536px) { ... }
     }
   },
   plugins: [require('tailwind-scrollbar-hide')],
