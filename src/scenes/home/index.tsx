@@ -3,7 +3,6 @@ import { useEffect, useState } from "react"
 import ActionButtonss from "@/shared/ActionButtonss"
 import { SelectedPage } from "@/shared/types"
 import HomePageLogo from "@/assets/logoHome.svg"
-import HomePageLogoBlack from "@/assets/logoHomeBlack.svg"
 import HomePageChef from "@/assets/imgD.svg"
 import Logo from "@/assets/freshLogo.svg"
 import Phone from "@/assets/iphone.svg"
@@ -60,7 +59,7 @@ const Home = (props: Props) => {
             />
             <section
                 id="home"
-                className="h-full bg-bhome-first bg-cover bg-center mb-80"
+                className="h-full bg-bhome-first bg-cover mb-80"
             >
                 {/* IMAGE AND MAIN HEADER */}
                 <motion.div
@@ -68,9 +67,9 @@ const Home = (props: Props) => {
                     onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
                 >
                     {/* MAIN HEADER */}
-                    <div className="w-4/5 flex flex-col mt-96 gap-60">
+                    <div className="w-4/5 flex flex-col lg:mt-96 lg:pt-0 pt-96 mt-40 gap-60">
                         <motion.div
-                            className="flex flex-col mx-20 gap-10"
+                            className="flex flex-col lg:mx-20 gap-10"
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true, amount: 0.5 }}

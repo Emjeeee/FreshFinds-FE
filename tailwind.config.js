@@ -30,7 +30,8 @@ export default {
         "pastry": "url('./src/assets/pastry.svg')",
         "egg": "url('./src/assets/egg.svg')",
         "bconnect": "url('./src/assets/connectBG.svg')",
-        "bingred": "url('./src/assets/bingre.svg')"
+        "bingre-first": "url('./src/assets/bingre.svg')",
+        "bcart-first": "url('./src/assets/bcart.svg')"
       }),
       fontFamily: {
         'uberMove': "uber",
@@ -47,7 +48,7 @@ export default {
       },
     },
     screens: {
-      sm: '640px',
+      sm: '528px',
       // => @media (min-width: 640px) { ... }
 
       md: '768px',

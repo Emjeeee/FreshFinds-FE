@@ -48,17 +48,14 @@ const Ingredients = (props: Props) => {
 
   return (
     <>
-      <section>
-        <section>
-          <Navbar
-            isTopOfPage={isTopOfPage}
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-          />
-        </section>
+      <Navbar
+          isTopOfPage={isTopOfPage}
+          selectedPage={selectedPage}
+          setSelectedPage={setSelectedPage}
+        />
         <section
           id="ingredients"
-          className="gap-16 h-full pb-0 bg-bingred bg-no-repeat bg-cover"
+          className="h-full bg-bingre-first bg-cover"
         >
           {/* IMAGE AND MAIN HEADER */}
           <motion.div
@@ -66,7 +63,7 @@ const Ingredients = (props: Props) => {
             onViewportEnter={() => setSelectedPage(SelectedPage.Ingredients)}
           >
             {/* MAIN HEADER */}
-            <div className="z-10 w-4/5 flex flex-col mt-24 gap-60">
+            <div className="z-10 w-4/5 flex flex-col gap-60">
               <motion.div
                 className="flex flex-col mx-20 mt-32 gap-2 text-white"
                 initial="hidden"
@@ -82,7 +79,7 @@ const Ingredients = (props: Props) => {
                 <div className="text-5xl font-bold">
                   Ingredients
                 </div>
-                <div className="text-xl">
+                <div className="text-xl tracking-wide">
                   Discover your perfect ingredients with FreshFinds
                 </div>
               </motion.div>
@@ -131,7 +128,7 @@ const Ingredients = (props: Props) => {
         </section>
         <section
           id="category-ingredients"
-          className="my-32 md:h-full md:pb-0"
+          className="h-1/2 bg-bhome-white flex flex-col justify-center"
         >
           <div className="gap-8 flex flex-col mx-64">
             <h1 className="text-4xl font-bold text-orange">
@@ -166,13 +163,13 @@ const Ingredients = (props: Props) => {
         </section>
         <section
           id="horizontal-line"
-          className="my-32 md:h-full md:pb-0"
+          className="h-1/5 flex flex-row justify-center"
         >
-          <hr className='w-11/12 h-1 mx-auto my-4 bg-black border-0 rounded md:my-10 dark:bg-gray-700'/>
+          <hr className='w-11/12 h-1 mx-auto my-4 bg-black border-0 rounded dark:bg-gray-700'/>
         </section>
         <section
           id="recipe"
-          className="my-32 md:h-full md:pb-0 mb-80"
+          className="h-full bg-bhome-white flex flex-col justify-center mb-40"
         >
           <div className='flex flex-col justify-center gap-20 text-black items-center mx-14'>
             <div className='flex w-full'>
@@ -229,7 +226,6 @@ const Ingredients = (props: Props) => {
           </div>
         </section>
         <Footer />
-      </section>
     </>
   )
 }
