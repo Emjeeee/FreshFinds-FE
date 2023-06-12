@@ -9,13 +9,13 @@ const SearchBar = () => {
     return (
         <Paper
             component="form"
-            sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 600, opacity: 0.5 }}
+            sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 600, opacity: 0.5, borderRadius: 4 }}
         >
             <IconButton type="button" sx={{ p: '10px', color: 'black' }} aria-label="search">
                 <SearchIcon />
             </IconButton>
             <InputBase
-                sx={{ ml: 1, flex: 1, }}
+                sx={{ ml: 1, flex: 1, fontWeight: 'bold',  }}
                 placeholder="www.FreshFinds.com"
                 inputProps={{ 'aria-label': 'www.FreshFinds.com' }}
             />

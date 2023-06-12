@@ -16,9 +16,9 @@ const Footer = (props: Props) => {
     <>
         <section
             id="connected"
-            className="gap-16 h-full pb-0 bg-bconnect bg-no-repeat bg-cover pt-48 -mt-52"
+            className="h-full bg-bconnect bg-cover bg-center flex flex-col justify-end -mt-[35rem]"
         >
-            <div className='flex flex-col justify-center gap-12 pt-24 pb-24'>
+            <div className='flex flex-col justify-center gap-12 pt-20 pb-32'>
                 <div className='flex justify-center text-6xl font-extrabold text-white'>
                     Let's Get Connected!
                 </div>
@@ -27,7 +27,7 @@ const Footer = (props: Props) => {
                 </div>
             </div>
         </section>
-        <div className='flex flex-col justify-center bg-black'>
+        <div className='flex flex-col justify-center bg-black bg-center bg-cover'>
             <div className='flex flex-row justify-between mx-32 mb-10 mt-5 h-full text-white'>
                 <div className='flex justify-center text-center'>
                     <img src={Logo} alt="logo" className='w-72 mb-16' />
@@ -86,7 +86,7 @@ const Footer = (props: Props) => {
                 </div>
             </div>
             <div>
-                <div className='flex justify-center text-center text-lg opacity-50 my-8'>
+                <div className='flex justify-center text-center text-lg opacity-50 my-6'>
                     Privacy Policy ● Support ● Copyright © 2023 FreshFinds
                 </div>
             </div>

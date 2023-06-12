@@ -7,6 +7,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Cart from './scenes/cart/index.tsx'
 
 const router = createBrowserRouter([
   {
@@ -14,9 +15,21 @@ const router = createBrowserRouter([
     element: <App/>,
   },
   {
-    path: "ingredients",
+    path: "/home",
+    element: <App />,
+  },
+  {
+    path: "/ingredients",
     element: <Ingredients />,
   },
+  {
+    path: "/cart",
+    element: <Cart />,
+  },
+  // {
+  //   path: "/forum",
+  //   element: <Forum />,
+  // },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(

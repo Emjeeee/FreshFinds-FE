@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid"
 import Logo from "@/assets/logo.svg"
-import Link from "./Link"
 import { SelectedPage } from "@/shared/types"
 import useMediaQuery from "@/hooks/useMediaQuery"
 import ActionButton from "@/shared/ActionButton"
 import ActionButtons from "@/shared/ActionButtons"
 import ActionButtonsss from "@/shared/ActionButtonsss"
-// import { Link } from "react-router-dom"
 
 type Props = {
     isTopOfPage: boolean
@@ -23,7 +21,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
     return <nav>
         <div
-            className={`${navbarBackground} ${flexBetween} absolute  top-0 z-40 w-full py-6 transition duration-500`}
+            className={`${navbarBackground} ${flexBetween} fixed  top-0 z-40 w-full py-6 transition duration-500`}
         >
             <div className={`${flexBetween} mx-auto w-5/6`}>
                 <div className={`${flexBetween} w-full gap-16`}>
@@ -34,7 +32,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                     {isAboveMediumScreens ? (
                         <div className={`${flexBetween} w-full`}>
                             <div className={`${flexBetween} gap-20 text-lg font-bold mx-20`}>
-                                <Link
+                                {/* <Link
                                     page="Home"
                                     selectedPage={selectedPage}
                                     setSelectedPage={setSelectedPage}
@@ -53,7 +51,11 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                                     page="Forum"
                                     selectedPage={selectedPage}
                                     setSelectedPage={setSelectedPage}
-                                />
+                                /> */}
+                                <a href="/home" className="hover:text-white">Home</a>
+                                <a href="/ingredients" className="hover:text-white">Ingredients</a>
+                                <a href="/cart" className="hover:text-white">Cart</a>
+                                <a href="" className="hover:text-white">Forum</a>
                             </div>
                             <div className={`${flexBetween} gap-8 font-bold`}>
                                 <ActionButton setSelectedPage={setSelectedPage}>Register</ActionButton>
@@ -84,7 +86,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
                 {/* MENU ITEMS */}
                 <div className="flex flex-col gap-10 text-2xl text-center text-white">
-                    <Link
+                    {/* <Link
                         page="Home"
                         selectedPage={selectedPage}
                         setSelectedPage={setSelectedPage}
@@ -103,7 +105,11 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                         page="Forum"
                         selectedPage={selectedPage}
                         setSelectedPage={setSelectedPage}
-                    />
+                    /> */}
+                    <a href="/home" className="hover:text-white">Home</a>
+                    <a href="/ingredients" className="hover:text-white">Ingredients</a>
+                    <a href="" className="hover:text-white">Cart</a>
+                    <a href="" className="hover:text-white">Forum</a>
                 </div>
 
                 {/* BUTTON */}

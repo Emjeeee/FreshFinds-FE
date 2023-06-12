@@ -31,7 +31,7 @@ type Props = {
 
 const Home = (props: Props) => {
 
-const [value, setValue] = React.useState<number | null>(1);
+    const [value, setValue] = React.useState<number | null>(1);
 
     const [selectedPage, setSelectedPage] = useState<SelectedPage>(
         SelectedPage.Home
@@ -51,8 +51,7 @@ const [value, setValue] = React.useState<number | null>(1);
     }, [])
 
     return (
-    <>
-        <section>
+        <>
             <Navbar
                 isTopOfPage={isTopOfPage}
                 selectedPage={selectedPage}
@@ -60,31 +59,31 @@ const [value, setValue] = React.useState<number | null>(1);
             />
             <section
                 id="home"
-                className="gap-16 h-full pb-0 bg-bhome bg-no-repeat bg-cover"
+                className="h-full bg-bhome-first bg-cover mb-80"
             >
                 {/* IMAGE AND MAIN HEADER */}
                 <motion.div
-                    className="flex flex-col items-center justify-center h-full bg-cover"
+                    className="flex flex-col items-center justify-center h-full"
                     onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
                 >
                     {/* MAIN HEADER */}
-                    <div className="z-10 w-4/5 flex flex-col mt-24 gap-60">
+                    <div className="w-4/5 flex flex-col lg:mt-96 lg:pt-0 pt-96 mt-40 gap-60">
                         <motion.div
-                            className="flex flex-col mx-20 mt-20 gap-10 "
+                            className="flex flex-col lg:mx-20 gap-10"
                             initial="hidden"
                             whileInView="visible"
-                            viewport={{once: true, amount: 0.5}}
+                            viewport={{ once: true, amount: 0.5 }}
                             transition={{ duration: 0.5 }}
                             variants={{
-                                hidden: { opacity: 0, x:-100 },
+                                hidden: { opacity: 0, x: -100 },
                                 visible: { opacity: 1, x: 0 }
                             }}
                         >
                             {/* LOGO */}
-                            <div className="text-black">
+                            <div>
                                 <img alt="home-page-logo" src={HomePageLogo} />
                             </div>
-                            <div className="px-3 mx-10">
+                            <div className="px-12">
                                 <ActionButtonss setSelectedPage={setSelectedPage}>
                                     Get Started!
                                 </ActionButtonss>
@@ -134,10 +133,10 @@ const [value, setValue] = React.useState<number | null>(1);
                 </motion.div>
             </section>
             <section
-                id="home-category-and-weekly-trending"
-                className="my-32 md:h-full md:pb-0"
+                id="choose-your-category-and-weekly-trending"
+                className="h-full bg-bhome-white flex flex-col justify-center"
             >
-                <div className="gap-8 flex flex-col mx-64">
+                <div className="gap-8 flex flex-col mx-64 align-middle">
                     <h1 className="text-4xl font-bold text-orange">
                         Choose Your Category
                     </h1>
@@ -176,16 +175,16 @@ const [value, setValue] = React.useState<number | null>(1);
                     </div>
                     <div className="flex flex-col mt-10 gap-28 justify-center">
                         <div>
-                            <SideScroll/>
+                            <SideScroll />
                         </div>
                     </div>
                 </div>
             </section>
             <section
-                id="home-trending-today"
-                className="gap-16 h-full pb-0 bg-btrend bg-orange bg-no-repeat bg-cover pt-96"
+                id="trending-today"
+                className="h-full bg-bhome-third bg-cover bg-top flex flex-col justify-center pt-40"
             >
-                <div className="flex flex-col mx-64">
+                <div className="flex flex-col mx-64 pt-80">
                     <div>
                         <h1 className="text-6xl font-semibold text-white flex justify-center mb-20 tracking-wide">
                             Trending Today!
@@ -205,17 +204,17 @@ const [value, setValue] = React.useState<number | null>(1);
                 </div>
             </section>
             <section
-                id="home-introducing"
-                className="gap-16 h-full bg-orange bg-no-repeat bg-cover pt-40"
+                id="freshfinds-introducing"
+                className="h-full bg-bhome-orange bg-cover bg-top flex flex-col justify-center pt-40"
             >
-                <div className="flex flex-col">
+                <div className="flex flex-col pt-80">
                     <div className="flex flex-row justify-center gap-4">
                         <div className="flex flex-row">
                             <img className="w-72" alt="logo" src={Logo} />
                         </div>
                         <h1 className="text-5xl text-white font-semibold flex mt-10">Introducing</h1>
                     </div>
-                    <div className="flex flex-row justify-between mt-12">
+                    <div className="flex flex-row justify-between mt-28">
                         <div className="flex flex-col gap-10 ml-60 justify-center">
                             <div className="flex flex-row gap-4">
                                 <img className="w-60" alt="logo" src={Logo} />
@@ -248,16 +247,16 @@ const [value, setValue] = React.useState<number | null>(1);
                             </div>
                         </div>
                         <div className="flex justify-end">
-                                <img src={Phone} alt="phone" className="-z-1 w-2/3" />
+                            <img src={Phone} alt="phone" className="-z-1 w-2/3" />
                         </div>
                     </div>
                 </div>
             </section>
             <section
-                id="home-feedbacks"
-                className="gap-16 h-full bg-orange bg-no-repeat bg-cover pt-40 pb-96"
+                id="freshfinds-feedbacks"
+                className="h-full bg-orange bg-cover bg-top flex flex-col justify-center pt-40"
             >
-                <div className="flex flex-col gap-40">
+                <div className="flex flex-col gap-40 pt-80">
                     <div className="flex flex-row justify-center gap-4">
                         <div className="flex flex-row">
                             <img className="w-72" alt="logo" src={Logo} />
@@ -301,7 +300,7 @@ const [value, setValue] = React.useState<number | null>(1);
                                         wonderful product!"
                                     </div>
                                     <div className="bg-black flex flex-row px-3 py-1 rounded-full gap-3 w-1/3 justify-center">
-                                            {/* EVERYONE */}
+                                        {/* EVERYONE */}
                                         <div className="text-orange text-sm">
                                             Everyone
                                         </div>
@@ -338,11 +337,12 @@ const [value, setValue] = React.useState<number | null>(1);
                                 <div className="flex flex-col w-3/5 pl-9 gap-7">
                                     <div>
                                         {/* REPLY */}
-                                            <TextField
+                                        <TextField
                                             fullWidth
                                             size="small"
                                             id="standard-basic" label="🌐 Everyone can reply"
-                                            variant="standard" />
+                                            variant="standard"
+                                        />
                                     </div>
                                     <div className="flex flex-row justify-end">
                                         {/* POST */}
@@ -356,9 +356,14 @@ const [value, setValue] = React.useState<number | null>(1);
                     </div>
                 </div>
             </section>
+            <section
+                className='h-1/2 bg-orange bg-cover bg-top flex flex-col justify-center pt-40'
+            >
+
+            </section>
             <Footer />
-        </section>
-    </>
-)}
+        </>
+    )
+}
 
 export default Home
