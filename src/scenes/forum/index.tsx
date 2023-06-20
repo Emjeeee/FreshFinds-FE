@@ -181,10 +181,10 @@ const Forum = (props: Props) => {
                             </div>
                             <div className='flex flex-row justify-evenly mt-12'>
                                 <div className='flex flex-row items-center'>
-                                    <a href=""><img src={DownVote} alt="" className='w-8 mr-8' /></a>
+                                    <a href=""><img src={UpVote} alt="" className='w-8 mr-8' /></a>
                                 </div>
                                 <div className='flex flex-row gap-3 items-center'>
-                                    <a href=""><img src={UpVote} alt="" className='w-8' /></a>
+                                    <a href=""><img src={DownVote} alt="" className='w-8' /></a>
                                     <p className='text-gray-400'>3.2 k</p>
                                 </div>
                                 <div className='flex flex-row gap-3 items-center'>
@@ -220,10 +220,10 @@ const Forum = (props: Props) => {
                             </div>
                             <div className='flex flex-row justify-evenly mt-12'>
                                 <div className='flex flex-row items-center'>
-                                    <a href=""><img src={DownVote} alt="" className='w-8 mr-8' /></a>
+                                    <a href=""><img src={UpVote} alt="" className='w-8 mr-8' /></a>
                                 </div>
                                 <div className='flex flex-row gap-3 items-center'>
-                                    <a href=""><img src={UpVote} alt="" className='w-8' /></a>
+                                    <a href=""><img src={DownVote} alt="" className='w-8' /></a>
                                     <p className='text-gray-400'>3.2 k</p>
                                 </div>
                                 <div className='flex flex-row gap-3 items-center'>
@@ -259,10 +259,10 @@ const Forum = (props: Props) => {
                             </div>
                             <div className='flex flex-row justify-evenly mt-12'>
                                 <div className='flex flex-row items-center'>
-                                    <a href=""><img src={DownVote} alt="" className='w-8 mr-8' /></a>
+                                    <a href=""><img src={UpVote} alt="" className='w-8 mr-8' /></a>
                                 </div>
                                 <div className='flex flex-row gap-3 items-center'>
-                                    <a href=""><img src={UpVote} alt="" className='w-8' /></a>
+                                    <a href=""><img src={DownVote} alt="" className='w-8' /></a>
                                     <p className='text-gray-400'>3.2 k</p>
                                 </div>
                                 <div className='flex flex-row gap-3 items-center'>
