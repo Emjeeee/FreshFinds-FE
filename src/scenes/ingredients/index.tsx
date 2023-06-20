@@ -11,15 +11,19 @@ import ToggleSwitchD from "@/shared/ToggleSwitchD"
 import ToggleSwitchE from "@/shared/ToggleSwitchE"
 import ToggleSwitchF from "@/shared/ToggleSwitchF"
 import ToggleSwitchG from "@/shared/ToggleSwitchG"
-import Card from "@/shared/Card"
-import TextField from "@mui/material/TextField"
+import Checkbox from '@mui/material/Checkbox'
 import Carousel from '@/shared/Carousel'
 import Cart from "@/assets/cart.svg"
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import BookmarkIcon from '@mui/icons-material/Bookmark';
 import Navbar from "@/scenes/navbar"
 import Footer from "@/scenes/footer"
 import Sushi from '@/assets/sushiCar.svg'
 import Burger from '@/assets/burgerCar.svg'
 import Salad from '@/assets/saladCar.svg'
+import FirstFood from '@/assets/firstFood.svg'
+import SecondFood from '@/assets/secondFood.svg'
+import ThirdFood from '@/assets/thirdFood.svg'
 
 type Props = {
   // setSelectedPage: (value: SelectedPage) => void
@@ -33,6 +37,8 @@ const Ingredients = (props: Props) => {
     SelectedPage.Ingredients
   )
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true)
+
+  const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -168,62 +174,287 @@ const Ingredients = (props: Props) => {
           <hr className='w-11/12 h-1 mx-auto my-4 bg-black border-0 rounded dark:bg-gray-700'/>
         </section>
         <section
+          id="kosong"
+          className="bg-bhome-white flex flex-col justify-center mb-96 mt-40"
+        >
+        </section>
+        <section
           id="recipe"
-          className="h-full bg-bhome-white flex flex-col justify-center mb-40"
+          className="h-full bg-bhome-white flex flex-col justify-center mb-96 mt-96"
         >
           <div className='flex flex-col justify-center gap-20 text-black items-center mx-14'>
             <div className='flex w-full'>
               {/* SLIDESHOW */}
               <Carousel/>
             </div>
-            <div className='flex flex-row gap-10'>
+            <div className='flex flex-row gap-20'>
               <div className='flex flex-col gap-20'>
                 {/* FIRST COLUMN */}
-                <div>
-                  GAMBAR
+                {/* <div className='relative'>
+                  <img src={FirstFood} alt="" className='w-80 ' />
+                  <div className="absolute inset-0 bg-black opacity-40"></div>
+                  <div className='flex flex-row '>
+                    <div className='flex flex-col '>
+                      <div>
+                        サーモン
+                      </div>
+                      <div>
+                        Salmon
+                      </div>
+                    </div>
+                    <div>
+                      <div>
+                        <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
+                      </div>
+                      <div>
+                        <Checkbox {...label} icon={<BookmarkBorderIcon />} checkedIcon={<BookmarkIcon />}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div> */}
+                <div className='relative'>
+                  <img src={FirstFood} alt="" className='w-full' />
+                  <div className='absolute inset-0 bg-black opacity-60'>
+                    <div className='absolute inset-0 flex flex-row justify-around items-center opacity-0 hover:opacity-100 transition-opacity'>
+                      <div className='text-white text-center text-2xl'>
+                        <div>サーモン</div>
+                        <div>Salmon</div>
+                      </div>
+                      <div className=''>
+                        <div>
+                          {/* <Checkbox {...label} icon={<BookmarkBorderIcon />} checkedIcon={<BookmarkIcon />} /> */}
+                        </div>
+                        <div>
+                          {/* <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} /> */}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  GAMBAR
+                <div className='relative'>
+                  <img src={FirstFood} alt="" className='w-full' />
+                  <div className='absolute inset-0 bg-black opacity-60'>
+                    <div className='absolute inset-0 flex flex-row justify-around items-center opacity-0 hover:opacity-100 transition-opacity'>
+                      <div className='text-white text-center text-2xl'>
+                        <div>サーモン</div>
+                        <div>Salmon</div>
+                      </div>
+                      <div className=''>
+                        <div>
+                          {/* <Checkbox {...label} icon={<BookmarkBorderIcon />} checkedIcon={<BookmarkIcon />} /> */}
+                        </div>
+                        <div>
+                          {/* <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} /> */}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  GAMBAR
+                <div className='relative'>
+                  <img src={FirstFood} alt="" className='w-full' />
+                  <div className='absolute inset-0 bg-black opacity-60'>
+                    <div className='absolute inset-0 flex flex-row justify-around items-center opacity-0 hover:opacity-100 transition-opacity'>
+                      <div className='text-white text-center text-2xl'>
+                        <div>サーモン</div>
+                        <div>Salmon</div>
+                      </div>
+                      <div className=''>
+                        <div>
+                          {/* <Checkbox {...label} icon={<BookmarkBorderIcon />} checkedIcon={<BookmarkIcon />} /> */}
+                        </div>
+                        <div>
+                          {/* <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} /> */}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  GAMBAR
+                <div className='relative'>
+                  <img src={FirstFood} alt="" className='w-full' />
+                  <div className='absolute inset-0 bg-black opacity-60'>
+                    <div className='absolute inset-0 flex flex-row justify-around items-center opacity-0 hover:opacity-100 transition-opacity'>
+                      <div className='text-white text-center text-2xl'>
+                        <div>サーモン</div>
+                        <div>Salmon</div>
+                      </div>
+                      <div className=''>
+                        <div>
+                          {/* <Checkbox {...label} icon={<BookmarkBorderIcon />} checkedIcon={<BookmarkIcon />} /> */}
+                        </div>
+                        <div>
+                          {/* <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} /> */}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className='flex flex-col gap-20'>
                 {/* SECOND COLUMN */}
-                <div>
-                  GAMBAR
+                <div className='relative'>
+                  <img src={SecondFood} alt="" className='w-full' />
+                  <div className='absolute inset-0 bg-black opacity-60'>
+                    <div className='absolute inset-0 flex flex-row justify-around items-center opacity-0 hover:opacity-100 transition-opacity'>
+                      <div className='text-white text-center text-2xl'>
+                        <div>シーチキン</div>
+                        <div>Tuna Fish</div>
+                      </div>
+                      <div className=''>
+                        <div>
+                          {/* <Checkbox {...label} icon={<BookmarkBorderIcon />} checkedIcon={<BookmarkIcon />} /> */}
+                        </div>
+                        <div>
+                          {/* <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} /> */}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  GAMBAR
+                <div className='relative'>
+                  <img src={SecondFood} alt="" className='w-full' />
+                  <div className='absolute inset-0 bg-black opacity-60'>
+                    <div className='absolute inset-0 flex flex-row justify-around items-center opacity-0 hover:opacity-100 transition-opacity'>
+                      <div className='text-white text-center text-2xl'>
+                        <div>シーチキン</div>
+                        <div>Tuna Fish</div>
+                      </div>
+                      <div className=''>
+                        <div>
+                          {/* <Checkbox {...label} icon={<BookmarkBorderIcon />} checkedIcon={<BookmarkIcon />} /> */}
+                        </div>
+                        <div>
+                          {/* <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} /> */}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  GAMBAR
+                <div className='relative'>
+                  <img src={SecondFood} alt="" className='w-full' />
+                  <div className='absolute inset-0 bg-black opacity-60'>
+                    <div className='absolute inset-0 flex flex-row justify-around items-center opacity-0 hover:opacity-100 transition-opacity'>
+                      <div className='text-white text-center text-2xl'>
+                        <div>シーチキン</div>
+                        <div>Tuna Fish</div>
+                      </div>
+                      <div className=''>
+                        <div>
+                          {/* <Checkbox {...label} icon={<BookmarkBorderIcon />} checkedIcon={<BookmarkIcon />} /> */}
+                        </div>
+                        <div>
+                          {/* <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} /> */}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  GAMBAR
+                <div className='relative'>
+                  <img src={SecondFood} alt="" className='w-full' />
+                  <div className='absolute inset-0 bg-black opacity-60'>
+                    <div className='absolute inset-0 flex flex-row justify-around items-center opacity-0 hover:opacity-100 transition-opacity'>
+                      <div className='text-white text-center text-2xl'>
+                        <div>シーチキン</div>
+                        <div>Tuna Fish</div>
+                      </div>
+                      <div className=''>
+                        <div>
+                          {/* <Checkbox {...label} icon={<BookmarkBorderIcon />} checkedIcon={<BookmarkIcon />} /> */}
+                        </div>
+                        <div>
+                          {/* <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} /> */}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className='flex flex-col gap-20'>
                 {/* THIRD COLUMN */}
-                <div>
-                  GAMBAR
+                <div className='relative'>
+                  <img src={ThirdFood} alt="" className='w-full' />
+                  <div className='absolute inset-0 bg-black opacity-60'>
+                    <div className='absolute inset-0 flex flex-row justify-around items-center opacity-0 hover:opacity-100 transition-opacity'>
+                      <div className='text-white text-center text-2xl'>
+                        <div>巻き寿司</div>
+                        <div>Sushi Roll</div>
+                      </div>
+                      <div className=''>
+                        <div>
+                          {/* <Checkbox {...label} icon={<BookmarkBorderIcon />} checkedIcon={<BookmarkIcon />} /> */}
+                        </div>
+                        <div>
+                          {/* <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} /> */}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  GAMBAR
+                <div className='relative'>
+                  <img src={ThirdFood} alt="" className='w-full' />
+                  <div className='absolute inset-0 bg-black opacity-60'>
+                    <div className='absolute inset-0 flex flex-row justify-around items-center opacity-0 hover:opacity-100 transition-opacity'>
+                      <div className='text-white text-center text-2xl'>
+                        <div>巻き寿司</div>
+                        <div>Sushi Roll</div>
+                      </div>
+                      <div className=''>
+                        <div>
+                          {/* <Checkbox {...label} icon={<BookmarkBorderIcon />} checkedIcon={<BookmarkIcon />} /> */}
+                        </div>
+                        <div>
+                          {/* <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} /> */}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  GAMBAR
+                <div className='relative'>
+                  <img src={ThirdFood} alt="" className='w-full' />
+                  <div className='absolute inset-0 bg-black opacity-60'>
+                    <div className='absolute inset-0 flex flex-row justify-around items-center opacity-0 hover:opacity-100 transition-opacity'>
+                      <div className='text-white text-center text-2xl'>
+                        <div>巻き寿司</div>
+                        <div>Sushi Roll</div>
+                      </div>
+                      <div className=''>
+                        <div>
+                          {/* <Checkbox {...label} icon={<BookmarkBorderIcon />} checkedIcon={<BookmarkIcon />} /> */}
+                        </div>
+                        <div>
+                          {/* <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} /> */}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  GAMBAR
+                <div className='relative'>
+                  <img src={ThirdFood} alt="" className='w-full' />
+                  <div className='absolute inset-0 bg-black opacity-60'>
+                    <div className='absolute inset-0 flex flex-row justify-around items-center opacity-0 hover:opacity-100 transition-opacity'>
+                      <div className='text-white text-center text-2xl'>
+                        <div>巻き寿司</div>
+                        <div>Sushi Roll</div>
+                      </div>
+                      <div className=''>
+                        <div>
+                          {/* <Checkbox {...label} icon={<BookmarkBorderIcon />} checkedIcon={<BookmarkIcon />} /> */}
+                        </div>
+                        <div>
+                          {/* <Checkbox {...label} icon={<FavoriteBorder />} checkedIcon={<Favorite />} /> */}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </section>
+        <section
+          id="kosong"
+          className="h-1/2 bg-bhome-white flex flex-col justify-center mb-20"
+        >
         </section>
         <Footer />
     </>
