@@ -106,11 +106,11 @@ const Cart = (props: Props) => {
                                             Explore ➜
                                         </ActionButtonss>
                                     </div>
-                                    <div className='flex flex-row gap-5'>
+                                    <div className='flex flex-row  gap-5'>
                                         <div>
-                                            <input type="checkbox" className='text-orange h-6 w-6 focus:ring-2 focus:ring-orange focus:bg-orange' name="" id="" />
+                                            <input type="checkbox" className='h-8 w-8 flex flex-col justify-center accent-orange caret-orange' name="" id="" />
                                         </div>
-                                        <div className='text-[#070606]'>
+                                        <div className='text-[#070606] text-2xl '>
                                             Select All
                                         </div>
                                     </div>
@@ -122,7 +122,7 @@ const Cart = (props: Props) => {
                                     </div>
                                     <div className='w-20 flex flex-col justify-center'>
                                         {/* CART ICON */}
-                                        <a href=""><img src={SortIcon} alt="" /></a>
+                                        <a href="/home"><img src={SortIcon} alt="" /></a>
                                     </div>
                                 </div>
                             </div>
@@ -133,65 +133,34 @@ const Cart = (props: Props) => {
             
             <section
                 id="horizontal-line"
-                className="h-1/5 flex flex-row justify-center"
+                className="h-1/5 flex flex-col  justify-center"
             >
                 <hr className='w-11/12 h-1 mx-auto my-4 bg-black border-0 rounded dark:bg-gray-700' />
             </section>
             <section
-                id="recipe"
-                className="h-full bg-bhome-white flex flex-col justify-center mb-40"
+                id="list"
+                className='h-full'
             >
-                <div className='flex flex-col justify-center gap-20 text-black items-center mx-14'>
-                    <div className='flex w-full'>
-                        {/* SLIDESHOW */}
-                        <Carousel />
+                <div className='flex flex-row justify-center border-red-50'>
+                    {/* LIST AND RECIPES */}
+                    <div className='flex flex-col'>
+                        {/* LIST */}
+                        <div className='flex flex-row'>
+                            <div>
+                                {/* CHECKBOX */}
+                                <input type="checkbox" className='h-8 w-8 flex flex-col justify-center accent-orange caret-orange' name="" id="" />
+                            </div>
+                            <div>
+                                {/* IMAGE */}
+                                <img src="" alt="" />
+                            </div>
+                            <div>
+                                {/* DESC */}
+                            </div>
+                        </div>
                     </div>
-                    <div className='flex flex-row gap-10'>
-                        <div className='flex flex-col gap-20'>
-                            {/* FIRST COLUMN */}
-                            <div>
-                                GAMBAR
-                            </div>
-                            <div>
-                                GAMBAR
-                            </div>
-                            <div>
-                                GAMBAR
-                            </div>
-                            <div>
-                                GAMBAR
-                            </div>
-                        </div>
-                        <div className='flex flex-col gap-20'>
-                            {/* SECOND COLUMN */}
-                            <div>
-                                GAMBAR
-                            </div>
-                            <div>
-                                GAMBAR
-                            </div>
-                            <div>
-                                GAMBAR
-                            </div>
-                            <div>
-                                GAMBAR
-                            </div>
-                        </div>
-                        <div className='flex flex-col gap-20'>
-                            {/* THIRD COLUMN */}
-                            <div>
-                                GAMBAR
-                            </div>
-                            <div>
-                                GAMBAR
-                            </div>
-                            <div>
-                                GAMBAR
-                            </div>
-                            <div>
-                                GAMBAR
-                            </div>
-                        </div>
+                    <div>
+                        {/* RECIPES */}
                     </div>
                 </div>
             </section>
