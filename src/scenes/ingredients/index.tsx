@@ -217,7 +217,7 @@ const Ingredients = (props: Props) => {
                   <img src={FirstFood} alt="" className='w-full' />
                   <div className='absolute inset-0 bg-black opacity-60'>
                     <div className='absolute inset-0 flex flex-row justify-around items-center opacity-0 hover:opacity-100 transition-opacity'>
-                      <div className='text-white text-center text-2xl'>
+                      <div className='text-white text-center text-2xl mx-48'>
                         <div>サーモン</div>
                         <div>Salmon</div>
                       </div>
@@ -236,7 +236,7 @@ const Ingredients = (props: Props) => {
                   <img src={FirstFood} alt="" className='w-full' />
                   <div className='absolute inset-0 bg-black opacity-60'>
                     <div className='absolute inset-0 flex flex-row justify-around items-center opacity-0 hover:opacity-100 transition-opacity'>
-                      <div className='text-white text-center text-2xl'>
+                      <div className='text-white text-center text-2xl mx-48'>
                         <div>サーモン</div>
                         <div>Salmon</div>
                       </div>
@@ -255,7 +255,7 @@ const Ingredients = (props: Props) => {
                   <img src={FirstFood} alt="" className='w-full' />
                   <div className='absolute inset-0 bg-black opacity-60'>
                     <div className='absolute inset-0 flex flex-row justify-around items-center opacity-0 hover:opacity-100 transition-opacity'>
-                      <div className='text-white text-center text-2xl'>
+                      <div className='text-white text-center text-2xl mx-48'>
                         <div>サーモン</div>
                         <div>Salmon</div>
                       </div>
@@ -274,7 +274,7 @@ const Ingredients = (props: Props) => {
                   <img src={FirstFood} alt="" className='w-full' />
                   <div className='absolute inset-0 bg-black opacity-60'>
                     <div className='absolute inset-0 flex flex-row justify-around items-center opacity-0 hover:opacity-100 transition-opacity'>
-                      <div className='text-white text-center text-2xl'>
+                      <div className='text-white text-center text-2xl mx-48'>
                         <div>サーモン</div>
                         <div>Salmon</div>
                       </div>
@@ -296,7 +296,7 @@ const Ingredients = (props: Props) => {
                   <img src={SecondFood} alt="" className='w-full' />
                   <div className='absolute inset-0 bg-black opacity-60'>
                     <div className='absolute inset-0 flex flex-row justify-around items-center opacity-0 hover:opacity-100 transition-opacity'>
-                      <div className='text-white text-center text-2xl'>
+                      <div className='text-white text-center text-2xl mx-48'>
                         <div>シーチキン</div>
                         <div>Tuna Fish</div>
                       </div>
@@ -315,7 +315,7 @@ const Ingredients = (props: Props) => {
                   <img src={SecondFood} alt="" className='w-full' />
                   <div className='absolute inset-0 bg-black opacity-60'>
                     <div className='absolute inset-0 flex flex-row justify-around items-center opacity-0 hover:opacity-100 transition-opacity'>
-                      <div className='text-white text-center text-2xl'>
+                      <div className='text-white text-center text-2xl mx-48'>
                         <div>シーチキン</div>
                         <div>Tuna Fish</div>
                       </div>
@@ -334,7 +334,7 @@ const Ingredients = (props: Props) => {
                   <img src={SecondFood} alt="" className='w-full' />
                   <div className='absolute inset-0 bg-black opacity-60'>
                     <div className='absolute inset-0 flex flex-row justify-around items-center opacity-0 hover:opacity-100 transition-opacity'>
-                      <div className='text-white text-center text-2xl'>
+                      <div className='text-white text-center text-2xl mx-48'>
                         <div>シーチキン</div>
                         <div>Tuna Fish</div>
                       </div>
@@ -353,7 +353,7 @@ const Ingredients = (props: Props) => {
                   <img src={SecondFood} alt="" className='w-full' />
                   <div className='absolute inset-0 bg-black opacity-60'>
                     <div className='absolute inset-0 flex flex-row justify-around items-center opacity-0 hover:opacity-100 transition-opacity'>
-                      <div className='text-white text-center text-2xl'>
+                      <div className='text-white text-center text-2xl mx-48'>
                         <div>シーチキン</div>
                         <div>Tuna Fish</div>
                       </div>
@@ -375,7 +375,7 @@ const Ingredients = (props: Props) => {
                   <img src={ThirdFood} alt="" className='w-full' />
                   <div className='absolute inset-0 bg-black opacity-60'>
                     <div className='absolute inset-0 flex flex-row justify-around items-center opacity-0 hover:opacity-100 transition-opacity'>
-                      <div className='text-white text-center text-2xl'>
+                      <div className='text-white text-center text-2xl mx-48'>
                         <div>巻き寿司</div>
                         <div>Sushi Roll</div>
                       </div>
@@ -394,7 +394,7 @@ const Ingredients = (props: Props) => {
                   <img src={ThirdFood} alt="" className='w-full' />
                   <div className='absolute inset-0 bg-black opacity-60'>
                     <div className='absolute inset-0 flex flex-row justify-around items-center opacity-0 hover:opacity-100 transition-opacity'>
-                      <div className='text-white text-center text-2xl'>
+                      <div className='text-white text-center text-2xl mx-48'>
                         <div>巻き寿司</div>
                         <div>Sushi Roll</div>
                       </div>
@@ -413,7 +413,7 @@ const Ingredients = (props: Props) => {
                   <img src={ThirdFood} alt="" className='w-full' />
                   <div className='absolute inset-0 bg-black opacity-60'>
                     <div className='absolute inset-0 flex flex-row justify-around items-center opacity-0 hover:opacity-100 transition-opacity'>
-                      <div className='text-white text-center text-2xl'>
+                      <div className='text-white text-center text-2xl mx-48'>
                         <div>巻き寿司</div>
                         <div>Sushi Roll</div>
                       </div>
@@ -432,7 +432,7 @@ const Ingredients = (props: Props) => {
                   <img src={ThirdFood} alt="" className='w-full' />
                   <div className='absolute inset-0 bg-black opacity-60'>
                     <div className='absolute inset-0 flex flex-row justify-around items-center opacity-0 hover:opacity-100 transition-opacity'>
-                      <div className='text-white text-center text-2xl'>
+                      <div className='text-white text-center text-2xl mx-48'>
                         <div>巻き寿司</div>
                         <div>Sushi Roll</div>
                       </div>

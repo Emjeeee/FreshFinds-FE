@@ -55,7 +55,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                                 <a href="/home" className="hover:text-white">Home</a>
                                 <a href="/ingredients" className="hover:text-white">Ingredients</a>
                                 <a href="/cart" className="hover:text-white">Cart</a>
-                                <a href="" className="hover:text-white">Forum</a>
+                                <a href="/forum" className="hover:text-white">Forum</a>
                             </div>
                             <div className={`${flexBetween} gap-8 font-bold`}>
                                 <ActionButton setSelectedPage={setSelectedPage}>Register</ActionButton>
