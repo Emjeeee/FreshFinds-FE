@@ -31,7 +31,7 @@ const SearchBars = () => {
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                 >
-                    <SendIcon/>
+                    <a href=""><SendIcon /></a>
                 </svg>
             </div>
         </form>

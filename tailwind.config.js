@@ -31,7 +31,8 @@ export default {
         "egg": "url('./src/assets/egg.svg')",
         "bconnect": "url('./src/assets/connectBG.svg')",
         "bingre-first": "url('./src/assets/bingre.svg')",
-        "bcart-first": "url('./src/assets/bcart.svg')"
+        "bcart-first": "url('./src/assets/bcart.svg')",
+        "bforum-first": "url('./src/assets/bforum.svg')"
       }),
       fontFamily: {
         'uberMove': "uber",

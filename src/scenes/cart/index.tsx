@@ -60,7 +60,7 @@ const Cart = (props: Props) => {
                     {/* MAIN HEADER */}
                     <div className="z-10 w-4/5 flex flex-col gap-80">
                         <motion.div
-                            className="flex flex-col mx-20 mt-60 gap-2 text-white"
+                            className="flex flex-col mx-20 mt-80 gap-2 text-white"
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true, amount: 0.5 }}
