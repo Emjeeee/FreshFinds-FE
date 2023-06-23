@@ -48,14 +48,14 @@ const Carousel = (props: Props) => {
   }
 
   return (
-    <div className='h-[600px] w-full m-auto px-20 relative group'>
+    <div className='h-[500px] w-full m-auto px-40 relative group'>
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
         className='w-full h-full bg-center bg-cover duration-500'
       ></div>
       {/* TEXT */}
       {/* <div className='-translate-y-full top-0  w-full h-full bg-black opacity-50'></div> */}
-      <div className='flex flex-col justify-center items-center -translate-y-[600px] text-2xl p-2 text-white cursor-pointer gap-3 h-[600px] bg-black bg-opacity-50'>
+      <div className='flex flex-col justify-center items-center -translate-y-[500px] text-2xl p-2 text-white cursor-pointer gap-3 h-[500px] bg-black bg-opacity-50'>
         <div className='text-8xl'>
           最上位リスト
         </div>
@@ -64,15 +64,15 @@ const Carousel = (props: Props) => {
         </div>
       </div>
       {/* Left Arrow */}
-      <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-24 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+      <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-48 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
         <BsChevronCompactLeft onClick={prevSlide} size={30} />
       </div>
       {/* Right Arrow */}
-      <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-24 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+      <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-48 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
         <BsChevronCompactRight onClick={nextSlide} size={30} />
       </div>
       {/* className='absolute -translate-y-28 left-1/2 text-2xl rounded-full p-2 text-white cursor-pointer rotate-90' */}
-      <div className='absolute top-[60%] -translate-x-1/2 translate-y-28 left-1/2 text-2xl p-2 text-white cursor-pointer rotate-90'>
+      <div className='absolute top-[60%] -translate-x-1/2 translate-y-20 left-1/2 text-2xl p-2 text-white cursor-pointer rotate-90'>
         {slides.map((slide, slideIndex) => (
           <div
             key={slideIndex}

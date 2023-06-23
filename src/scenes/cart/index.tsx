@@ -5,16 +5,13 @@ import SearchBars from '@/shared/SearchBars'
 import SortIcon from '@/assets/iconSort.svg'
 import { SelectedPage } from "@/shared/types"
 import { motion } from "framer-motion"
-import ToggleSwitchA from "@/shared/ToggleSwitchA"
-import ToggleSwitchB from "@/shared/ToggleSwitchB"
-import ToggleSwitchC from "@/shared/ToggleSwitchC"
-import ToggleSwitchD from "@/shared/ToggleSwitchD"
-import ToggleSwitchE from "@/shared/ToggleSwitchE"
-import ToggleSwitchF from "@/shared/ToggleSwitchF"
-import ToggleSwitchG from "@/shared/ToggleSwitchG"
-import Carousel from '@/shared/Carousel'
+import Timer from '@/assets/timer.svg'
+import Flash from '@/assets/flash.svg'
+import Type from '@/assets/type.svg'
 import Navbar from "@/scenes/navbar"
 import Footer from "@/scenes/footer"
+import CheckBox from '@/shared/CheckBox'
+import List from '@/shared/List'
 
 type Props = {
     // setSelectedPage: (value: SelectedPage) => void
@@ -28,6 +25,61 @@ const Cart = (props: Props) => {
         SelectedPage.Cart
     )
     const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true)
+    
+    const [selectAll, setSelectAll] = useState(false);
+    const [checkboxes, setCheckboxes] = useState([false]);
+
+    const handleSelectAll = () => {
+        const updatedCheckboxes = checkboxes.map(() => !selectAll);
+        setCheckboxes(updatedCheckboxes);
+        setSelectAll(!selectAll);
+    };
+
+    const handleCheckboxChange = (index: number) => {
+        const updatedCheckboxes = [...checkboxes];
+        updatedCheckboxes[index] = !checkboxes[index];
+        setCheckboxes(updatedCheckboxes);
+
+        if (updatedCheckboxes.every((checkbox) => checkbox)) {
+            setSelectAll(true);
+        } else if (updatedCheckboxes.every((checkbox) => !checkbox)) {
+            setSelectAll(false);
+        }
+    };
+
+    const [checked, setChecked] = useState(false);
+
+    const handleChange = () => {
+        setChecked(!checked);
+    };
+
+    const listsData = [
+        {
+            images: ['/src/assets/firstFood.svg'],
+            title: ['サーモン - Salmon Sushi'],
+            subtitle: ['Sushi'],
+        },
+        {
+            images: ['/src/assets/secondFood.svg'],
+            title: ['シーチキン - Tuna Fish Sushi'],
+            subtitle: ['Sushi'],
+        },
+        {
+            images: ['/src/assets/thirdFood.svg'],
+            title: ['巻き寿司 - Sushi Roll'],
+            subtitle: ['Sushi'],
+        },
+        {
+            images: ['/src/assets/firstFood.svg'],
+            title: ['サーモン - Salmon Sushi'],
+            subtitle: ['Sushi'],
+        },
+        {
+            images: ['/src/assets/secondFood.svg'],
+            title: ['シーチキン - Tuna Fish Sushi'],
+            subtitle: ['Sushi'],
+        },
+    ];
 
     useEffect(() => {
         const handleScroll = () => {
@@ -50,7 +102,7 @@ const Cart = (props: Props) => {
             />
             <section
                 id="cart"
-                className="h-full bg-bcart-first bg-cover mb-40"
+                className="h-full bg-bcart-first bg-cover"
             >
                 {/* IMAGE AND MAIN HEADER */}
                 <motion.div
@@ -58,9 +110,9 @@ const Cart = (props: Props) => {
                     onViewportEnter={() => setSelectedPage(SelectedPage.Cart)}
                 >
                     {/* MAIN HEADER */}
-                    <div className="z-10 w-4/5 flex flex-col gap-80">
+                    <div className="z-10 w-4/5 flex flex-col gap-60">
                         <motion.div
-                            className="flex flex-col mx-20 mt-80 gap-2 text-white"
+                            className="flex flex-col mx-20 mt-60 gap-2 text-white"
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true, amount: 0.5 }}
@@ -97,7 +149,7 @@ const Cart = (props: Props) => {
                             </div>
                             <div className='flex flex-row justify-between'>
                                 {/* DESC */}
-                                <div className='flex flex-col gap-10'>
+                                <div className='flex flex-col gap-14'>
                                     <div className='text-3xl text-black'>
                                         List of recipes that you have chosen
                                     </div>
@@ -106,21 +158,26 @@ const Cart = (props: Props) => {
                                             Explore ➜
                                         </ActionButtonss>
                                     </div>
-                                    <div className='flex flex-row  gap-5'>
+                                    <div className='flex flex-row gap-5 items-center'>
                                         <div>
-                                            <input type="checkbox" className='h-8 w-8 flex flex-col justify-center accent-orange caret-orange' name="" id="" />
+                                            <input
+                                                type="checkbox"
+                                                className="h-8 w-8 accent-orange caret-orange"
+                                                checked={selectAll}
+                                                onChange={handleSelectAll}
+                                            />
                                         </div>
-                                        <div className='text-[#070606] text-2xl '>
+                                        <label htmlFor="selectAll" className="text-black text-2xl">
                                             Select All
-                                        </div>
+                                        </label>
                                     </div>
                                 </div>
                                 <div className='flex flex-row w-1/2 justify-start'>
-                                    <div className='w-full flex flex-col justify-center'>
+                                    <div className='w-full flex flex-col justify-start'>
                                         {/* SEARCH BAR */}
                                         <SearchBars />
                                     </div>
-                                    <div className='w-20 flex flex-col justify-center'>
+                                    <div className='w-20 flex flex-col justify-start'>
                                         {/* CART ICON */}
                                         <a href="/home"><img src={SortIcon} alt="" /></a>
                                     </div>
@@ -130,7 +187,6 @@ const Cart = (props: Props) => {
                     </div>
                 </motion.div>
             </section>
-            
             <section
                 id="horizontal-line"
                 className="h-1/5 flex flex-col  justify-center"
@@ -139,31 +195,70 @@ const Cart = (props: Props) => {
             </section>
             <section
                 id="list"
-                className='h-full'
+                className='h-full w-full'
             >
-                <div className='flex flex-row justify-center border-red-50'>
+                <div className='flex flex-row'>
                     {/* LIST AND RECIPES */}
-                    <div className='flex flex-col'>
+                    <div className='flex flex-col gap-20'>
                         {/* LIST */}
-                        <div className='flex flex-row'>
-                            <div>
-                                {/* CHECKBOX */}
-                                <input type="checkbox" className='h-8 w-8 flex flex-col justify-center accent-orange caret-orange' name="" id="" />
+                        {listsData.map((list, index) => (
+                            <List
+                                key={index}
+                                images={list.images}
+                                title={list.title}
+                                subtitle={list.subtitle}
+                            />
+                        ))}
+                    </div>
+                    <div className='flex flex-col gap-12 rounded-lg shadow-[2px_2px_10px_6px_rgba(7,6,6,0.10)] p-16 pr-40 h-1/2 pb-28'>
+                        {/* RECIPES */}
+                        <div className='flex flex-row text-black text-3xl font-bold'>
+                            <h1>サーモン - Salmon Sushi</h1>
+                        </div>
+                        <div className='flex flex-row justify-start mx-3 gap-4'>
+                            <div className='flex flex-col justify-center items-center gap-6'>
+                                <img src={Timer} alt="" className='w-8'/>
+                                <img src={Flash} alt="" className='w-8'/>
+                                <img src={Type} alt="" className='w-6'/>
                             </div>
-                            <div>
-                                {/* IMAGE */}
-                                <img src="" alt="" />
+                            <div className='flex flex-col text-gray-500 text-xl font-bold items-start gap-7'>
+                                <p>30 minutes</p>
+                                <p>560 kcal</p>
+                                <p>Beginner</p>
                             </div>
-                            <div>
-                                {/* DESC */}
+                        </div>
+                        <div className='flex flex-row text-black text-3xl font-bold'>
+                            <h1>Ingredients</h1>
+                        </div>
+                        <div className='flex flex-col gap-4 mx-4'>
+                            <div className='flex flex-row items-center gap-5'>
+                                <CheckBox checked={checked} onChange={handleChange} />
+                                <p className='text-black font-medium text-lg mr-1'>Japanese Rice</p>
+                                <p className='text-gray-400'>250g</p>
+                            </div>
+                            <div className='flex flex-row items-center gap-5'>
+                                <CheckBox checked={checked} onChange={handleChange} />
+                                <p className='text-black font-medium text-lg mr-1'>Salmon</p>
+                                <p className='text-gray-400'>300g</p>
+                            </div>
+                            <div className='flex flex-row items-center gap-5'>
+                                <CheckBox checked={checked} onChange={handleChange} />
+                                <p className='text-black font-medium text-lg mr-1'>Wasabi</p>
+                                <p className='text-gray-400'>50g</p>
+                            </div>
+                            <div className='flex flex-row items-center gap-5'>
+                                <CheckBox checked={checked} onChange={handleChange} />
+                                <p className='text-black font-medium text-lg mr-1'>Sushi Vinegar</p>
+                                <p className='text-gray-400'>40ml</p>
                             </div>
                         </div>
                     </div>
-                    <div>
-                        {/* RECIPES */}
-                    </div>
                 </div>
             </section>
+            <section
+                id="kosong"
+                className="h-full bg-bhome-white flex flex-col justify-center mb-96"
+            ></section>
             <Footer />
         </>
     )
