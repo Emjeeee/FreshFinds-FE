@@ -38,10 +38,10 @@ const Footer = (props: Props) => {
                             Pages
                         </h1>
                         <div className='flex flex-col gap-3 text-xl'>
-                            <a href="#home">Home</a>
-                            <a href="#ingredients">Ingredients</a>
-                            <a href="#cart">Cart</a>
-                            <a href="#forum">Forum</a>
+                            <a href="/home">Home</a>
+                            <a href="/ingredients">Ingredients</a>
+                            <a href="/cart">Cart</a>
+                            <a href="/forum">Forum</a>
                         </div>
                     </div>
                     <div className='flex flex-col gap-7'>

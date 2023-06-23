@@ -25,11 +25,7 @@ import Rating from '@mui/material/Rating'
 import Navbar from "@/scenes/navbar"
 import Footer from "@/scenes/footer"
 
-type Props = {
-    // setSelectedPage: (value: SelectedPage) => void
-}
-
-const Home = (props: Props) => {
+const Home = () => {
 
     const [value, setValue] = React.useState<number | null>(1);
 
@@ -84,9 +80,11 @@ const Home = (props: Props) => {
                                 <img alt="home-page-logo" src={HomePageLogo} />
                             </div>
                             <div className="px-12">
-                                <ActionButtonss setSelectedPage={setSelectedPage}>
-                                    Get Started!
-                                </ActionButtonss>
+                                <a href="#start">
+                                    <ActionButtonss setSelectedPage={setSelectedPage}>
+                                        Get Started!
+                                    </ActionButtonss>
+                                </a>
                             </div>
                         </motion.div>
                         {/* HEADINGS */}
@@ -100,7 +98,7 @@ const Home = (props: Props) => {
                                 visible: { opacity: 1, x: 0 },
                             }}
                         >
-                            <div className="flex flex-row pt-40 justify-around">
+                            <div className="flex flex-row pt-40 justify-around" id='start'>
                                 <div>
                                     <div className="md: w-[491.69]">
                                         <img alt="home-page-chef" src={HomePageChef} />
@@ -122,9 +120,11 @@ const Home = (props: Props) => {
                                     </p>
                                     {/* ACTIONS */}
                                     <div className="text-end mt-10">
-                                        <ActionButtonss setSelectedPage={setSelectedPage}>
-                                            Explore ➜
-                                        </ActionButtonss>
+                                        <a href="/ingredients">
+                                            <ActionButtonss setSelectedPage={setSelectedPage}>
+                                                Explore ➜
+                                            </ActionButtonss>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

@@ -20,7 +20,6 @@ import { SelectedPage } from "@/shared/types"
 import { motion } from "framer-motion"
 import Navbar from "@/scenes/navbar"
 import Footer from "@/scenes/footer"
-import { common } from '@mui/material/colors'
 
 type Props = {
     // setSelectedPage: (value: SelectedPage) => void
@@ -31,7 +30,7 @@ const Forum = (props: Props) => {
     const [value, setValue] = React.useState<number | null>(1);
 
     const [selectedPage, setSelectedPage] = useState<SelectedPage>(
-        SelectedPage.Cart
+        SelectedPage.Forum
     )
     const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true)
 
@@ -39,7 +38,7 @@ const Forum = (props: Props) => {
         const handleScroll = () => {
             if (window.scrollY === 0) {
                 setIsTopOfPage(true)
-                setSelectedPage(SelectedPage.Cart)
+                setSelectedPage(SelectedPage.Forum)
             }
             if (window.scrollY !== 0) setIsTopOfPage(false)
         }
@@ -61,7 +60,7 @@ const Forum = (props: Props) => {
                 {/* IMAGE AND MAIN HEADER */}
                 <motion.div
                     className="flex flex-col items-center justify-center h-full bg-cover"
-                    onViewportEnter={() => setSelectedPage(SelectedPage.Cart)}
+                    onViewportEnter={() => setSelectedPage(SelectedPage.Forum)}
                 >
                     {/* MAIN HEADER */}
                     <div className="z-10 w-4/5 flex flex-col gap-80">
